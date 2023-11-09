@@ -29,7 +29,7 @@ function divide(...nums) {
     if (nums.length < 1) {
         return 0
     } else {
-        let result = nums.reduce((sum, current) => sum / current);
+        let result = (nums.reduce((sum, current) => sum / current)).toFixed(2);
         return result;
     }
 }

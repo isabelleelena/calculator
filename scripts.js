@@ -1,3 +1,9 @@
+// Variables:
+
+let firstNum = 0;
+let secondNum = 0;
+let operator = '';
+
 // Calculation Functions:
 
 function addition(...nums) {
@@ -40,13 +46,17 @@ function operate(num1, num2, op) {
     }
 }
 
-// Variables:
+function calcDisplayValue(string) {
+    let operationArray = string.split(' ');
+    firstNum += +(operationArray[0]);
+    secondNum += +(operationArray[2]);
+    operator += operationArray[1]
+    return operate(firstNum, secondNum, operator);
+}
 
-let firstNum = '';
-let secondNum = '';
-let operator = '';
+// Query selectors and event listeners:
 
-let displayValue = document.querySelector(".display");
+let displayValue = document.querySelector(".input");
 displayValue.textContent = '';
 
 let numButtons = document.querySelectorAll('.number-button');
@@ -54,6 +64,7 @@ numButtons.forEach((button) => {
     button.addEventListener('click', () => {
         let buttonText = button.value;
         displayValue.textContent += buttonText;
+        return displayValue
     })
 })
 
@@ -61,11 +72,18 @@ let opButtons = document.querySelectorAll('.operator-button');
 opButtons.forEach((button) => {
     button.addEventListener('click', () => {
         let buttonText = button.value;
-        displayValue.textContent += buttonText;
+        displayValue.textContent += ` ${buttonText} `;
+        return displayValue
     })
 })
 
 let clearButton = document.querySelector('.clear-button');
 clearButton.addEventListener('click', () => {
     displayValue.textContent = '';
+})
+
+let equalsButton = document.querySelector('.equals-button');
+equalsButton.addEventListener('click', () => {
+    let answer = calcDisplayValue(displayValue.textContent);
+    displayValue.textContent = answer;
 })

@@ -45,4 +45,27 @@ function operate(num1, num2, op) {
 let firstNum = '';
 let secondNum = '';
 let operator = '';
-let displayValue = '';
+
+let displayValue = document.querySelector(".display");
+displayValue.textContent = '';
+
+let numButtons = document.querySelectorAll('.number-button');
+numButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        let buttonText = button.value;
+        displayValue.textContent += buttonText;
+    })
+})
+
+let opButtons = document.querySelectorAll('.operator-button');
+opButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        let buttonText = button.value;
+        displayValue.textContent += buttonText;
+    })
+})
+
+let clearButton = document.querySelector('.clear-button');
+clearButton.addEventListener('click', () => {
+    displayValue.textContent = '';
+})

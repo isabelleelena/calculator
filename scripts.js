@@ -6,8 +6,12 @@ function addition(...nums) {
 }
 
 function subtraction(...nums) {
-    let result = nums.reduce((sum, current) => sum - current, 0);
+    if (nums.length < 1) {
+        return 0
+    } else {
+    let result = nums.reduce((sum, current) => sum - current);
     return result;
+    }
 }
 
 function multiply(...nums) {
@@ -21,5 +25,17 @@ function divide(...nums) {
     } else {
         let result = nums.reduce((sum, current) => sum / current);
         return result;
+    }
+}
+
+function operate(operator, ...nums) {
+    if (operator == '+') {
+        return addition(nums);
+    } else if (operator == '-') {
+        return subtraction(nums);
+    } else if (operator == '*') {
+        return multiply(nums);
+    } else if (operator == '/') {
+        return divide(nums);
     }
 }

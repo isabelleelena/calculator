@@ -45,3 +45,4 @@ function operate(num1, num2, op) {
 let firstNum = '';
 let secondNum = '';
 let operator = '';
+let displayValue = '';

@@ -28,14 +28,20 @@ function divide(...nums) {
     }
 }
 
-function operate(operator, ...nums) {
-    if (operator == '+') {
-        return addition(nums);
-    } else if (operator == '-') {
-        return subtraction(nums);
-    } else if (operator == '*') {
-        return multiply(nums);
-    } else if (operator == '/') {
-        return divide(nums);
+function operate(num1, num2, op) {
+    if (op == '+') {
+        return addition(num1, num2);
+    } else if (op == '-') {
+        return subtraction(num1, num2);
+    } else if (op == '*') {
+        return multiply(num1, num2);
+    } else if (op == '/') {
+        return divide(num1, num2);
     }
 }
+
+// Variables:
+
+let firstNum = '';
+let secondNum = '';
+let operator = '';

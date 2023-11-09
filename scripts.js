@@ -48,10 +48,18 @@ function operate(num1, num2, op) {
 
 function calcDisplayValue(string) {
     let operationArray = string.split(' ');
-    firstNum += +(operationArray[0]);
-    secondNum += +(operationArray[2]);
-    operator += operationArray[1]
-    return operate(firstNum, secondNum, operator);
+    while (operationArray.length > 1) {
+        if (operationArray[1] == '/' && operationArray[2] == 0) {
+            return "You are a nincompoop. You can't divide by zero!"
+        } else {
+            firstNum = +(operationArray[0]);
+            secondNum = +(operationArray[2]);
+            operator = operationArray[1];
+            let newIndexZero = operate(firstNum, secondNum, operator);
+            operationArray.splice(0, 3, newIndexZero);
+        }
+    }
+    return operationArray[0]
 }
 
 // Query selectors and event listeners:

@@ -1,5 +1,6 @@
 #container {
     display: flex;
+    flex-direction: column;
 }
 
 .input {
@@ -10,4 +11,15 @@
 
 .keypad {
     display: flex;
+}
+
+.number-button,
+.operator-button,
+.decimal-button,
+.equals-button,
+.backspace-button {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    box-sizing: border-box;
 }

@@ -80,6 +80,7 @@ numButtons.forEach((button) => {
 let opButtons = document.querySelectorAll('.operator-button');
 opButtons.forEach((button) => {
     button.addEventListener('click', () => {
+        decimalClicked = false;
         let buttonText = button.value;
         displayValue.textContent += ` ${buttonText} `;
         return displayValue

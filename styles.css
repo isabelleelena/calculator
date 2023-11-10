@@ -23,3 +23,12 @@
     margin: 5px;
     box-sizing: border-box;
 }
+
+.clear-button {
+    height: 100px;
+    width: 50px;
+    display: flex;
+    flex: column;
+    box-sizing: border-box;
+    margin: 5px;
+}

@@ -22,7 +22,7 @@ function subtraction(...nums) {
 }
 
 function multiply(...nums) {
-    let result = nums.reduce((sum, current) => sum * current, 1);
+    let result = (nums.reduce((sum, current) => sum * current, 1)).toFixed2(2);
     return result;
 }
 

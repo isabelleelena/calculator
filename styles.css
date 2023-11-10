@@ -1,6 +1,8 @@
 #container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .input {
@@ -11,22 +13,43 @@
 
 .keypad {
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.operator-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.number-pad {
+    display: flex;
+    width: 400px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .number-button,
-.operator-button,
 .decimal-button,
-.equals-button,
+.equals-button {
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+.operator-button,
 .backspace-button {
-    height: 50px;
-    width: 50px;
+    height: 25px;
+    width: 25px;
     margin: 5px;
     box-sizing: border-box;
 }
 
 .clear-button {
-    height: 100px;
-    width: 50px;
+    height: 65px;
+    width: 25px;
     display: flex;
     flex: column;
     box-sizing: border-box;

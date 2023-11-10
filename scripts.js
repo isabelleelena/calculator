@@ -3,6 +3,7 @@
 let firstNum = 0;
 let secondNum = 0;
 let operator = '';
+let decimalClicked = false;
 
 // Calculation Functions:
 
@@ -88,10 +89,21 @@ opButtons.forEach((button) => {
 let clearButton = document.querySelector('.clear-button');
 clearButton.addEventListener('click', () => {
     displayValue.textContent = '';
+    decimalClicked = false;
 })
 
 let equalsButton = document.querySelector('.equals-button');
 equalsButton.addEventListener('click', () => {
     let answer = calcDisplayValue(displayValue.textContent);
     displayValue.textContent = answer;
+})
+
+let decimalButton = document.querySelector(".decimal-button");
+decimalButton.addEventListener('click', () => {
+    if (decimalClicked == false) {
+        displayValue.textContent += decimalButton.value;
+        decimalClicked = true;
+    } else {
+        displayValue.textContent += '';
+    }
 })

@@ -108,3 +108,12 @@ decimalButton.addEventListener('click', () => {
         displayValue.textContent += '';
     }
 })
+
+let backspaceButton = document.querySelector(".backspace-button");
+backspaceButton.addEventListener('click', () => {
+    textForArray = displayValue.textContent;
+    arrayForBackspace = textForArray.split('');
+    arrayForBackspace.splice(-1, 1);
+    let backspaceString = arrayForBackspace.join('');
+    displayValue.textContent = backspaceString;
+})

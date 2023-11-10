@@ -2,21 +2,22 @@ body {
     display: flex;
     justify-content: center;
     align-content: center;
-    margin: 50px;
-    background-color: rgb(162, 255, 255);
+    margin: 70px;
+    background-color: rgb(189 255 241);
 }
 
 #container {
     display: flex;
     width: 450px;
-    height: 587px;
+    height: 627px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-shrink: 1;
     box-sizing: border-box;
     padding: 20px;
-    background-color: palevioletred;
+    background-color: #ff87b5;
+    border-radius: 25px;
 }
 
 .input {
@@ -28,7 +29,6 @@ body {
     margin-left: 10px;
     margin-right: 10px;
     padding: 20px;
-    border: solid black 1px;
     background-color: white;
     flex-shrink: 1;
     box-sizing: border-box;
@@ -40,7 +40,7 @@ body {
     width: 390px;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 20px;
     flex-shrink: 1;
     box-sizing: border-box;
 }
@@ -70,6 +70,11 @@ body {
     margin: 5px;
     box-sizing: border-box;
     flex-shrink: 1;
+    background-color: #ffd0e2;
+    border: 0px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
 }
 
 .operator-button,
@@ -79,6 +84,11 @@ body {
     margin: 5px;
     box-sizing: border-box;
     flex-shrink: 1;
+    background-color: #ff418a;
+    border: 0px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
 }
 
 .clear-button {

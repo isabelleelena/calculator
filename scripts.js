@@ -76,6 +76,16 @@ numButtons.forEach((button) => {
         return displayValue
     })
 })
+numButtons.forEach((button) => {
+    button.addEventListener('mouseover', () => {
+        button.style.backgroundColor = '#d63170';
+    })
+})
+numButtons.forEach((button) => {
+    button.addEventListener('mouseout', () => {
+        button.style.backgroundColor = '#ffd0e2'
+    })
+})
 
 let opButtons = document.querySelectorAll('.operator-button');
 opButtons.forEach((button) => {
@@ -86,17 +96,40 @@ opButtons.forEach((button) => {
         return displayValue
     })
 })
+opButtons.forEach((button) => {
+    button.addEventListener('mouseover', () => {
+        button.style.backgroundColor = '#d63170';
+    })
+})
+opButtons.forEach((button) => {
+    button.addEventListener('mouseout', () => {
+        button.style.backgroundColor = '#ff418a'
+    })
+})
 
 let clearButton = document.querySelector('.clear-button');
 clearButton.addEventListener('click', () => {
     displayValue.textContent = '';
     decimalClicked = false;
 })
+clearButton.addEventListener('mouseover', () => {
+    clearButton.style.backgroundColor = '#d63170';
+})
+clearButton.addEventListener('mouseout', () => {
+    clearButton.style.backgroundColor = '#ff418a'
+})
+
 
 let equalsButton = document.querySelector('.equals-button');
 equalsButton.addEventListener('click', () => {
     let answer = calcDisplayValue(displayValue.textContent);
     displayValue.textContent = answer;
+})
+equalsButton.addEventListener('mouseover', () => {
+    equalsButton.style.backgroundColor = '#d63170';
+})
+equalsButton.addEventListener('mouseout', () => {
+    equalsButton.style.backgroundColor = '#ffd0e2'
 })
 
 let decimalButton = document.querySelector(".decimal-button");
@@ -108,6 +141,12 @@ decimalButton.addEventListener('click', () => {
         displayValue.textContent += '';
     }
 })
+decimalButton.addEventListener('mouseover', () => {
+    decimalButton.style.backgroundColor = '#d63170';
+})
+decimalButton.addEventListener('mouseout', () => {
+    decimalButton.style.backgroundColor = '#ffd0e2'
+})
 
 let backspaceButton = document.querySelector(".backspace-button");
 backspaceButton.addEventListener('click', () => {
@@ -116,4 +155,10 @@ backspaceButton.addEventListener('click', () => {
     arrayForBackspace.splice(-1, 1);
     let backspaceString = arrayForBackspace.join('');
     displayValue.textContent = backspaceString;
+})
+backspaceButton.addEventListener('mouseover', () => {
+    backspaceButton.style.backgroundColor = '#d63170';
+})
+backspaceButton.addEventListener('mouseout', () => {
+    backspaceButton.style.backgroundColor = '#ff418a'
 })

@@ -1,3 +1,10 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 50px;
+}
+
 #container {
     display: flex;
     width: 410px;
@@ -5,6 +12,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-shrink: 1;
 }
 
 .input {
@@ -14,6 +22,7 @@
     margin-left: 10px;
     margin-right: 10px;
     border: solid black 1px;
+    flex-shrink: 1;
 }
 
 .keypad {
@@ -22,6 +31,7 @@
     justify-content: center;
     align-items: center;
     margin: 10px;
+    flex-shrink: 1;
 }
 
 .operator-column {
@@ -29,6 +39,7 @@
     height: 440px;
     flex-direction: column;
     align-items: center;
+    flex-shrink: 1;
 }
 
 .number-pad {
@@ -37,6 +48,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    flex-shrink: 1;
 }
 
 .number-button,
@@ -46,6 +58,7 @@
     width: 100px;
     margin: 5px;
     box-sizing: border-box;
+    flex-shrink: 1;
 }
 
 .operator-button,
@@ -54,6 +67,7 @@
     width: 50px;
     margin: 5px;
     box-sizing: border-box;
+    flex-shrink: 1;
 }
 
 .clear-button {
@@ -61,4 +75,5 @@
     height: 150px;
     box-sizing: border-box;
     margin: 5px;
+    flex-shrink: 1;
 }

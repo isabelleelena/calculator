@@ -23,7 +23,7 @@ function subtraction(...nums) {
 
 function multiply(...nums) {
     let result = nums.reduce((sum, current) => sum * current, 1);
-    return result;
+    return result.toFixed(2);
 }
 
 function divide(...nums) {

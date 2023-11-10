@@ -1,3 +1,13 @@
 #container {
     display: flex;
 }
+
+.input {
+    height: 50px;
+    width: 500px;
+    box-sizing: border-box;
+}
+
+.keypad {
+    display: flex;
+}
